@@ -1,57 +1,50 @@
-# Olympics-Medal-Prediction-Machine-Learning-Model
-# Athlete Medals Prediction Model
+# Olympics Athlete Team Performance Prediction
 
-This project builds a machine learning model to predict the number of medals athletes will win based on their past performance and other relevant features.
+This project aims to predict the number of medals won by athlete teams based on various factors, including the team's history, athlete demographics, and previous performances.
 
 ## Project Overview
 
-The objective of this project is to use historical athlete data to build a predictive model that estimates the number of medals an athlete is expected to win. The dataset used for this project contains information about athletes, their performances, and their medals. By leveraging machine learning techniques, this model helps to forecast future medal achievements for athletes.
+The main objective of this project is to use a machine learning model to predict the number of medals a team will win in future events. The dataset used contains detailed information about athlete teams across various years, including the team's country, event participation, and previous performance in medals won.
 
 ## Dataset
 
-The dataset used in this project (`teams.csv`) contains the following features:
-- **Team Name**: Name of the team or country.
-- **Event**: The specific event the athlete/team participated in.
-- **Year**: The year in which the event took place.
-- **Athletes**: Names or count of athletes.
-- **Medals**: The number of medals won by the athlete or team.
-
-The dataset was pre-processed and used to train various machine learning models, with the goal of predicting future medal counts.
+The dataset used for training and evaluating the model is `teams.csv`, which contains the following features:
+- **team**: Name of the team.
+- **country**: Country the team represents.
+- **year**: Year of participation.
+- **events**: Number of events the team participated in.
+- **athletes**: Number of athletes in the team.
+- **age**: Average age of the athletes.
+- **height**: Average height of the athletes.
+- **weight**: Average weight of the athletes.
+- **medals**: Number of medals won by the team.
+- **prev_medals**: Number of medals won in previous events.
+- **prev_3_medals**: Number of medals won in the last three events.
 
 ## Files in the Repository
 
-- `teams.csv`: The dataset used for training the model.
-- `model.py`: The Python script used for data preprocessing, model training, and evaluation.
-- `prediction_results.ipynb`: A Jupyter notebook that contains the exploration of data, training, and testing of the predictive models.
-- `README.md`: This file that explains the project.
+- **`teams.csv`**: The dataset used for training and evaluation.
+- **`olympic_medal_prediction.ipynb`**: A Jupyter notebook containing data exploration, feature engineering, model training, and evaluation.
+- **`README.md`**: This file, which explains the project structure, dataset, and model details.
 
 ## Model and Performance
 
-The final model was evaluated using the following metrics:
-- **Mean Absolute Error (MAE)**: A measure of the average error in the model's predictions.
-- **Mean Squared Error (MSE)**: A measure of how large the squared differences are between actual and predicted values.
-- **R² Score**: Indicates the proportion of the variance in the dependent variable that is predictable from the independent variables.
-
-**Training Set**:
-- MAE: [Value]
-- MSE: [Value]
-- R² Score: [Value]
-
-**Test Set**:
-- MAE: [Value]
-- MSE: [Value]
-- R² Score: [Value]
+The machine learning model was trained to predict the number of medals won by teams based on their attributes. The model was evaluated using various metrics, such as:
+- **Mean Absolute Error (MAE)**
+- **Mean Squared Error (MSE)**
+- **R² Score**
 
 ## Requirements
 
-To run this project, you need the following libraries:
+To run the code in this repository, you need to have the following libraries installed:
+
 - Python 3.x
 - numpy
 - pandas
 - scikit-learn
 - matplotlib
 
-Install the required libraries using:
+You can install the required libraries using the following command:
 
 ```bash
 pip install -r requirements.txt
@@ -59,30 +52,31 @@ pip install -r requirements.txt
 
 ## How to Run the Code
 
-1. Clone the repository:
+1. Clone this repository:
     ```bash
     git clone https://github.com/nderitugichuki/your-repository-name.git
     ```
-   
+
 2. Navigate to the project directory:
     ```bash
     cd your-repository-name
     ```
 
-3. Run the model script:
+3. Open the Jupyter notebook `medal_prediction.ipynb` to explore the code and run the model.
+
+4. Alternatively, you can run the model by executing the Python script:
     ```bash
     python model.py
     ```
 
-Alternatively, you can run and explore the results using the Jupyter notebook provided.
-
 ## Next Steps
 
-To improve the model further, future work can include:
-- Adding more features to enhance the predictive power of the model.
-- Trying out more advanced machine learning models or tuning the hyperparameters.
-- Collecting more data to improve generalization.
+To further improve the model, the following can be explored:
+- Feature engineering to include additional factors that might influence team performance.
+- Testing with more advanced machine learning algorithms.
+- Fine-tuning hyperparameters to improve prediction accuracy.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
+
